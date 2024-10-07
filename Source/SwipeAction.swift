@@ -89,10 +89,12 @@ public class SwipeAction: NSObject {
 
      - parameter style: The style of the action button.
      - parameter title: The title of the action button.
+     - parameter image: The image of the action button.
      - parameter handler: The closure to execute when the user taps the button associated with this action.
     */
-    public init(style: SwipeActionStyle, title: String?, handler: ((SwipeAction, IndexPath) -> Void)?) {
+    public init(style: SwipeActionStyle, title: String? = nil, image:UIImage? = nil, handler: ((SwipeAction, IndexPath) -> Void)?) {
         self.title = title
+        self.image = image
         self.style = style
         self.handler = handler
     }

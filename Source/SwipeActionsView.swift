@@ -63,7 +63,7 @@ class SwipeActionsView: UIView {
     }
 
     var preferredWidth: CGFloat {
-        return minimumButtonWidth * CGFloat(actions.count) + safeAreaMargin
+        return minimumButtonWidth * CGFloat(actions.count) + safeAreaMargin + (options.swipeEdgeSpacing ?? 0)
     }
 
     var contentSize: CGSize {
